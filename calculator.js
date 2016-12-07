@@ -43,5 +43,12 @@ var sub = function (numb1, numb2) {
 //     1. First number
 //     2. Second number
 //     3. A function that performs an operation on them
+var mathy = function(numb1, numb2, opp) {
+  return opp(numb1, numb2);
+
+}
+
+
+
 
 //   Return the value of the operation.
