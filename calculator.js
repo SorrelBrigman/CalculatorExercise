@@ -43,12 +43,24 @@ var sub = function (numb1, numb2) {
 //     1. First number
 //     2. Second number
 //     3. A function that performs an operation on them
-var mathy = function(numb1, numb2, opp) {
-  return opp(numb1, numb2);
-
+var mathy = function(opp) {
+  //gather numbers from input fields
+  var num1 =  document.querySelector("#numb1").value;
+  var num2 =  document.querySelector("numb2").value;
+  //   Return the value of the operation.
+  var answer =  opp(numb1, numb2);
+//Put answer in html page
+document.querySelector("#answer").innerHTML = answer;
 }
 
 
 
 
-//   Return the value of the operation.
+//assigning variables to buttons on the DOM
+var addBut = document.querySelector("#add").value;
+var subBut = document.querySelector("#sub").value;
+var divBut = document.querySelector("#div").value;
+var multBut = document.querySelector("#mult").value;
+
+
+addBut.addEventListerner("click", mathy(add));
